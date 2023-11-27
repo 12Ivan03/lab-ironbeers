@@ -102,3 +102,54 @@ font-family: Arial, Helvetica, sans-serif;
 .random-beer-btn:hover {
     cursor: pointer;
 }
+
+
+/* Beers - page */
+
+.beer-page .nav-bar {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+}
+
+.unorganised-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5rem;
+}
+
+/* li structure  */
+
+.container-description {
+    width: 23rem;
+}
+
+.beer-image {
+    border-bottom: solid 0.3rem black;
+}
+
+.sizing-ul{
+    border-right: solid 0.1rem black;
+}
+
+.container-description li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-description li p {
+    margin-bottom: 0.5rem;
+
+}
+
+.container-description li:not(:first-child) {
+    margin: 1rem 1rem 0 2rem;
+}
+
+.beer-image img{
+    height: 10rem;
+    margin-bottom: 0.2rem;
+}
+
