@@ -1,21 +1,9 @@
-
 <div class="unorganised-container">
     {{#each beersFromApi}}
         <div class="sizing-ul">
             <ul class="container-description">
-                <li class="beer-image"><img src="{{image_url}}" alt=""></li>
-                <li class="beer-name">
-                    <p><i>Name:</i></p> 
-                    <p>{{name}}</p>
-                </li>
-                <li class="beer-description">
-                    <p><i>Description:</i></p>
-                    <p>{{description}}</p>
-                </li>
-                <li class="tag-line">
-                    <p><i>Tagline:</i></p>
-                    <p>{{tagline}}</p>
-                </li>
+                <li class="beer-image"><img src="{{this.image_url}}" alt=""></li>
+                {{> beerpartial}}
             </ul>
         </div>
     {{/each}}

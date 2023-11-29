@@ -1,29 +1,18 @@
 <div class="sizing-ul">
-    <div class="random-beer-conrainer">
-        <img src="{{randomBeerFromAPI.[0].image_url}}" alt="Image not availave.Better luck next time.">
-    </div>
-    <ul class="container-description">  
-        <li class="beer-name">
-            <p><i>Name:</i></p> 
-            <p>{{randomBeerFromAPI.[0].name}}</p>
-        </li>
-        <li class="beer-description">
-            <p><i>Description:</i></p>
-            <p>{{randomBeerFromAPI.[0].description}}</p>
-        </li>
-        <li class="tag-line">
-            <p><i>Tagline:</i></p>
-            <p>{{randomBeerFromAPI.[0].tagline}}</p>
-        </li>
-        <li class="tag-line">
-           <p><i>Food pairing:</i></p>
-           <p>{{randomBeerFromAPI.[0].food_pairing}}</p>
-        </li>
-        <li class="tag-line">
-            <p><i>Brewers tips:</i></p>
-            <p>{{randomBeerFromAPI.[0].brewers_tips}}</p>
-        </li>
-    </ul>
+    {{#each randomBeerFromAPI}}
+        <div class="random-beer-conrainer">
+            <img src="{{this.image_url}}" alt="Image not availave.Better luck next time.">
+        </div>
+        <ul class="container-description">
+            {{> beerpartial}}
+            <li class="tag-line">
+                <p><i>Food pairing:</i></p>
+                <p>{{this.food_pairing}}</p>
+            </li>
+            <li class="tag-line">
+                <p><i>Brewers tips:</i></p>
+                <p>{{this.brewers_tips}}</p>
+            </li>
+        </ul>
+    {{/each}}
 </div>
-            
-            
